@@ -32,6 +32,9 @@ add_library(cpp-palp_lib ${SOURCE_LIST} ${HEADER_LIST})
 # Users of the library need the include directory too
 target_include_directories(cpp-palp_lib PUBLIC ../include)
 
+# Link the libraries it needs
+target_link_libraries(cpp-palp_lib PRIVATE fmt::fmt)
+
 # Needs at least C++17
 target_compile_features(cpp-palp_lib PUBLIC cxx_std_17)
 

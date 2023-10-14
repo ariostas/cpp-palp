@@ -31,6 +31,13 @@ endif()
 # Use FetchContent to download external libraries
 include(FetchContent)
 
+# Formatting library
+FetchContent_Declare(
+  fmtlib
+  GIT_REPOSITORY https://github.com/fmtlib/fmt.git
+  GIT_TAG 5.3.0)
+FetchContent_MakeAvailable(fmtlib)
+
 # Compiled library code
 add_subdirectory(src)
 
